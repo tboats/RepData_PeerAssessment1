@@ -1,9 +1,10 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 date: "March 14, 2015 (pi day)"
-output: 
+output:
   html_document:
     keep_md: true
+    
 ---
 
 

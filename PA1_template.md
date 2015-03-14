@@ -1,5 +1,11 @@
-# Reproducible Research: Peer Assessment 1
-March 14, 2015 (pi day)  
+---
+title: "Reproducible Research: Peer Assessment 1"
+date: "March 14, 2015 (pi day)"
+output:
+  html_document:
+    keep_md: true
+    
+---
 
 
 ## Loading and preprocessing the data
@@ -36,7 +42,7 @@ library(ggplot2)
 qplot(data=datSum,steps,geom="histogram",binwidth=1000)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 The mean number of steps is:
 
@@ -71,7 +77,7 @@ names(datDaily)<-c("interval","steps")
 qplot(data=datDaily,interval,steps)+geom_line()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 To answer the question: Which interval contains the most steps on average:
 
@@ -127,7 +133,7 @@ names(datInterpDaily)<-c("interval","steps")
 qplot(data=datInterpDaily,steps,geom="histogram",binwidth=1000)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
 
 Again, the mean and median number of steps per day, but this time on the interpolated data set.
 
@@ -191,6 +197,6 @@ names(datInterpDailyDOW)<-c("interval","dayType","steps")
 qplot(data=datInterpDailyDOW,interval,steps)+facet_grid(dayType~.)+geom_line()
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-15-1.png) 
+![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15-1.png) 
 
 The end.
